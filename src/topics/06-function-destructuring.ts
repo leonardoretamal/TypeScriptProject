@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
   description: string;
   price: number;
 }
@@ -22,7 +22,7 @@ interface TaxCalculationOptions {
 //desestructuración array
 /* function taxCalculation(options: TaxCalculationOptions): [number, number] { */
 /* function taxCalculation({tax ,products}: TaxCalculationOptions): [number, number] { no sirve si tienen muchas opciones*/
-function taxCalculation(options: TaxCalculationOptions): [number, number] {
+export function taxCalculation(options: TaxCalculationOptions): [number, number] {
   const { products, tax } = options;
   let total = 0;
   //destructuramos product
@@ -41,5 +41,3 @@ const [total, taxResult] = taxCalculation({ products: shoppingCart, tax });
 
 console.log("Total: ", total);
 console.log("Total tax: ", taxResult);
-
-export {};
