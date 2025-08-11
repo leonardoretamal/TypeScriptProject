@@ -19,23 +19,27 @@ interface TaxCalculationOptions {
   tax: number;
   products: Product[];
 }
-
-function taxCalculation(options: TaxCalculationOptions): number[] {
+//desestructuración array
+/* function taxCalculation(options: TaxCalculationOptions): [number, number] { */
+/* function taxCalculation({tax ,products}: TaxCalculationOptions): [number, number] { no sirve si tienen muchas opciones*/
+function taxCalculation(options: TaxCalculationOptions): [number, number] {
+  const { products, tax } = options;
   let total = 0;
-
-  options.products.forEach((product) => {
-    total += product.price;
+  //destructuramos product
+  products.forEach(({ price }) => {
+    total += price;
   });
 
-  return [total, total * options.tax];
+  return [total, total * tax];
 }
 
 const shoppingCart = [phone, tablet];
 const tax = 0.15;
 
-const result = taxCalculation({ products: shoppingCart, tax });
+//desestructuración array
+const [total, taxResult] = taxCalculation({ products: shoppingCart, tax });
 
-console.log("Total: ", result[0]);
-console.log("Total tax: ", result[1]);
+console.log("Total: ", total);
+console.log("Total tax: ", taxResult);
 
 export {};
