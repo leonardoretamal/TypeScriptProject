@@ -34,6 +34,7 @@ const {
 //y luego podemos acceder a sus propiedades
 const { author, year } = details;
 
+console.log(".:::Destructuring Object:::.");
 console.log("Song: ", AnothersSong);
 console.log("Duration: ", duration);
 console.log("Author: ", author);
@@ -41,5 +42,10 @@ console.log("Year: ", year);
 //ejemplos sin destructuring
 /* console.log(audioPlayer.song);
 console.log(audioPlayer.details.author); */
+
+//desestructuracion de arrays
+console.log(".:::Destructuring Arrays:::.");
+const [, , trunks = "Not Found"] = ["Goku", "Vegeta"]; // asignamos un valor por defecto en caso de que no exista
+console.log("personaje 3: ", trunks);
 
 export {};
