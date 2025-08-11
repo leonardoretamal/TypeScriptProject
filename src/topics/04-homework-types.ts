@@ -15,6 +15,8 @@ interface Address {
   city: string;
 }
 
+
+// Ejercicio: Crear una interfaz que sirva para validar el siguiente objeto
 const superHeroe: SuperHero = {
   name: "Spiderman",
   age: 30,
