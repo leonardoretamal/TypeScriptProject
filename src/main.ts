@@ -8,7 +8,8 @@ import "./style.css";
 //import "./topics/07-export-import";
 //import "./topics/08-clases";
 //import "./topics/09-generics";
-import "./topics/10-decorators";
+//import "./topics/10-decorators";
+import "./topics/11-opcional-chaining";
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 
